@@ -1,0 +1,130 @@
+<html lang="en"><head>
+  <title>Contract Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <section class="main-sec">
+    <div class="parent-wrap">
+      <h1 class="contracts-wrap-head mb-5 text-dark">CONTRACT INSIGHTS</h1>
+        <div class="col-sm-12 contracts-lib p-5">
+          <div class="upper-block mb-5">
+            <p class="region p-2 mr-3">
+              REGION-WISE CONTRACTS <br> SIGNED THIS PERIOD
+            </p>
+            <div class="table-wrap">
+
+            
+            <table class="table">
+              <tr>
+                <th></th>
+                <th>CALIFORNIA</th>
+              <th>NEVADA</th>
+              <th>WASHINGTON DC</th>
+              <th>FLORIDA</th></tr>
+              <tr>
+                <td>QUARTER OR YEAR</td>
+                <td>12</td>
+                <td>8</td>
+                <td>14</td>
+                <td>10</td>
+              </tr>
+            </table>
+          </div>
+          </div>
+          <hr class="mb-4">
+          <div class="lower-block">
+            <p class="region p-2 mr-3">
+              CONTRACTS SIGNED 
+            </p>
+            <div id="graph">
+              <div id="graph-container">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+  </section>
+
+
+  <!-- loader -->
+  <div id="loader" class="fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle>
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#cf1d16">
+      </circle>
+    </svg></div>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+  <script src="js/main.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script>
+Highcharts.chart('graph-container', {
+    chart: {
+        type: 'pie',
+        options3d: {
+            enabled: true,
+            alpha: 45,
+            beta: 0
+        }
+    },
+    title: {
+        text: ''
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            depth: 35,
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}'
+            }
+        }
+    },
+    series: [{
+        type: 'pie',
+        name: 'Contracts Signed',
+        data: [
+            ['NEW', 56.0],
+            ['RENEWALS', 33.4],
+            /* {
+                name: 'Chrome',
+                y: 12.8,
+                sliced: true,
+                selected: true
+            }, */
+            ['TERMINATION', 10.6],
+           
+        ]
+    }]
+});</script>
+
+  <script>
+    
+  </script>
+
+</body></html>
