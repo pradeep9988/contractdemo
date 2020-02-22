@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+  <title>Contract Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <section class="main-sec">
+    <div class="parent-wrap generate-wrap">
+      <!-- <div class="generate-wrap"> -->
+
+      <div class="text-div text-dark px-4 pb-4 col-sm-8">
+        <h4 class="mb-5">FRANCHISE AGREEMENT</h4>
+        <p>
+
+          This AGREEMENT entered into on this date <span id="effective">02/01/2020</span> having its registered office
+          at <span id="address">ds</span> (herein
+          after referred to as Distribution Licensee which expression shall unless repugnant to the
+          context or meaning thereof include its successors and permitted assigns) as party of the First
+          part,
+        </p>
+        <p>
+
+          And
+          <span id="franchise">Option 1</span> having its registered office at <span id="address"></span> (herein after
+          referred to as Franchisee (Rural System Operator) which expression shall unless repugnant to
+          the context or meaning thereof include its successors and permitted assigns) as party of the
+          Second part.
+        </p>
+        <p>
+
+          Whereas the State Electricity Regulatory Commission has published the Guidelines, namely,
+          Guidelines by <span id="incorporation">Telangana</span> Electricity Regulatory Commission for Development,
+          Management and Operations of Off‐Grid Distributed Renewable Energy Generation and Supply,
+          (hereinafter referred to as Rural System Operator Guidelines or RSO Guidelines) enabling
+          establishment of Off‐Grid Renewable Energy Generation Facility and establishment of
+          distribution network by Rural System Operator in the identified Project Area within Distribution
+          Licensee and undertake to supply power to consumers in the Project Area for and on behalf of
+          Distribution Licensee through Franchisee Arrangement.
+        </p>
+        <p>
+          By <span id="owner">d</span> having <span id="ownership">Option 3</span> for <span id="term">2</span> agreed
+          for <span id="agreed">ds</span> at <span id="royalty">ds</span>
+        </p>
+        <div class="mt-5 gencom-buttons">
+          <a href="contracts-library.html" class="btn btn-gencom mr-3">GENERATE</a>
+          <a href="" class="btn btn-gencom">COMPARE</a>
+        </div>
+      </div>
+      <div class="right-block col-sm-3 mx-4 pb-4">
+        <div class="right-wrap px-4 py-4">
+          <h3 class="mb-4
+           ">Deviation</h3>
+
+          <p class="mb-4">The contract term is 9 months, this is a deviation from Standard Positions, which requires
+            minimum contract of 1 year.</p>
+          <p class="mb-4">Send contract for additional approval to Unit Finance COntroller</p>
+          <button class="btn btn-outline  mb-2">SEND</button>
+          <button class="btn btn-outline  mb-2">NOT NOW</button>
+        </div>
+        <div class="right-wrap px-4 py-4 mt-4">
+          <div class="email-add">Email Id <button class="btn btn-outline">ADD</button></div>
+        </div>
+        <div class="right-wrap px-4 py-4 mt-4">
+          <div class="email-add">Comment <button class="btn btn-outline">POST</button></div>
+        </div>
+      </div>
+      <!-- </div> -->
+
+    </div>
+  </section>
+
+
+  <!-- loader -->
+  <div id="loader" class="fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle>
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#cf1d16">
+      </circle>
+    </svg></div>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+
+  <script src="js/main.js"></script>
+
+  <script>
+    var formData = JSON.parse(sessionStorage.getItem('formData'));
+    document.getElementById('effective').innerHTML = formData.effectiveDate;
+    document.getElementById('franchise').innerHTML = formData.division;
+    document.getElementById('ownership').innerHTML = formData.ownership;
+    document.getElementById('owner').innerHTML = formData.managingOwner;
+    document.getElementById('incorporation').innerHTML = formData.incorporation;
+    document.getElementById('address').innerHTML = formData.fullAdd;
+    document.getElementById('term').innerHTML = formData.termDate;
+    document.getElementById('agreed').innerHTML = formData.agreedFee;
+    document.getElementById('royalty').innerHTML = formData.roayltyRate;
+
+    //sessionStorage.setItem('cards', JSON.stringify(this.shared.cards));
+  </script>
+
+</body>
+
+</html>
