@@ -11,14 +11,17 @@
 
 <body>
   <section class="main-sec">
-    <div class="parent-wrap">
-      <h1 class="contracts-wrap-head mb-5 text-dark">CONTRACT INSIGHTS</h1>
+      <div class="logo px-5 pt-3 text-right">
+          <a href="index.html"><img src="img/logo.jpg" alt="logo"></a>
+        </div>
+    <div class="parent-wrap p-2 p-lg-5 pt-5">
+      <h1 class="contracts-wrap-head mb-3 mb-lg-5 text-dark">CONTRACT INSIGHTS</h1>
         <div class="col-sm-12 contracts-lib p-5">
           <div class="upper-block mb-5">
             <p class="region p-2 mr-3">
               REGION-WISE CONTRACTS <br> SIGNED THIS PERIOD
             </p>
-            <div class="table-wrap">
+            <div class="table-wrap table-responsive">
 
             
             <table class="table">
@@ -41,10 +44,35 @@
           <hr class="mb-4">
           <div class="lower-block">
             <p class="region p-2 mr-3">
-              CONTRACTS SIGNED 
+              Contracts Signed
             </p>
             <div id="graph">
               <div id="graph-container">
+
+              </div>
+            </div>
+          </div>
+          <div class="lower-block">
+            <p class="region p-2 mr-3">
+              Avg royalty signed region-wise
+            </p>
+            <div id="graph-two">
+              <div id="graph-bar">
+
+              </div>
+            </div>
+            <!-- <div id="graph-three">
+              <div id="graph-bar-two">
+
+              </div>
+            </div> -->
+          </div>
+          <div class="lower-block">
+            <p class="region p-2 mr-3">
+              Avg term of renewal, region-wise
+            </p>
+            <div id="graph-three">
+              <div id="graph-bar-two">
 
               </div>
             </div>
@@ -121,7 +149,101 @@ Highcharts.chart('graph-container', {
            
         ]
     }]
-});</script>
+});
+
+Highcharts.chart('graph-bar', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: ''
+    },
+    xAxis: {
+        categories: [
+            'California',
+            'Nevada',
+            'Washington DC',
+            'Florida'
+            
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: ''
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0; font-size: 12px;">{series.name}: </td>' +
+            '<td style="padding:0; font-size: 12px;"><b>{point.y:.1f} %</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Royalty Signed',
+        data: [4, 8, 9, 10]
+
+    }
+  
+    ]
+});
+
+Highcharts.chart('graph-bar-two', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: ''
+    },
+    xAxis: {
+        categories: [
+            'California',
+            'Nevada',
+            'Washington DC',
+            'Florida'
+            
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: ''
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0; font-size: 12px;">{series.name}: </td>' +
+            '<td style="padding:0; font-size: 12px;"><b>{point.y:.1f} </b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Term of renewal',
+        data: [2, 1, 8, 15]
+
+    }
+  
+    ]
+});
+</script>
+
 
   <script>
     
