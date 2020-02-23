@@ -120,7 +120,16 @@ h1, h2, h3, h4, h5 {
       }
       .logo{
         margin-bottom: -20px;
+        display: flex;
+    align-items: center;
+    justify-content: flex-end;
       }
+      span.logo-wrap {
+        background: #ddd url(../dist/img/logo.JPG) no-repeat center;
+        width: 143px;
+        height: 73px;
+        display: block;
+    }
       .aside{
         background: #3e64ff;
       }
