@@ -719,3 +719,8 @@ hr.mb-4 {
   padding: 0;
   border: 1px solid #2196f3;
 }
+.agreement-overflow {
+  height: 380px;
+  overflow-y: scroll;
+  border: 1px solid #d7dde0;
+}
