@@ -37,10 +37,11 @@
         <div class="question-wrap col-sm-12 py-3 my-2">
           <p class="mb-0 text-dark">Which division does this Franchise fall under?</p>
           <div class="info-wrap">
-            <select class="question-wrap-select " name="division" id="division-select" value="Option 1">
-              <option value="Option 1">Option 1</option>
-              <option value="Option 2">Option 2</option>
-              <option value="Option 3">Option 3</option>
+            <select class="question-wrap-select " name="division" id="division-select">
+              <option value="North West">North West</option>
+              <option value="North East">North East</option>
+              <option value="Mid West">Mid West</option>
+              <option value="South">South</option>
             </select>
         </div>
         </div>
@@ -48,10 +49,10 @@
         <div class="question-wrap col-sm-12 py-3 my-2">
           <p class="mb-0 text-dark">Pick the right ownership structure from this.</p>
           <div class="info-wrap">
-            <select class="question-wrap-select " name="ownership" id="ownership" value="Option 3">
-              <option value="Option 1">Option 1</option>
-              <option value="Option 2">Option 2</option>
-              <option value="Option 3" selected>Option 3</option>
+            <select class="question-wrap-select " name="ownership" id="ownership">
+              <option value="Corporation">Corporation</option>
+              <option value="LLP">LLP</option>
+              <option value="Sole Proprietorship">Sole Proprietorship</option>
             </select>
         </div>
         </div>
@@ -67,9 +68,9 @@
           <p class="mb-0 text-dark">Which state is the incorporation in?</p>
           <div class="info-wrap">
             <select class="question-wrap-select " name="incorporation" id="incorporation" value="Telangana">
-              <option value="Telangana" selected>Telangana</option>
-              <option value="Andhra Pradesh" >Andhra Pradesh</option>
-              <option value="Karnataka">Karnataka</option>
+              <option value="Texas">Texas</option>
+              <option value="New Jersey" >New Jersey</option>
+              <option value="Massachussets">Massachusets</option>
             </select>
           </div>
         </div>
@@ -86,10 +87,11 @@
           <p class="mb-0 text-dark">Select the term of the contract.</p>
           <div class="info-wrap">
             <select class="question-wrap-select years" name="termDate" id="term-date" value="2">
-              <option value="1">1</option>
-              <option value="2" selected>2</option>
               <option value="3">3</option>
-            </select> <span>Year(s)</span>
+              <option value="6">6</option>
+              <option value="9">9</option>
+              <option value="12">12</option>
+            </select> <span>Month (s)</span>
             <!-- <div class="input-group date" data-provide="datepicker">
                 <input type="text" required class="form-control" id="term-date" value="" name="termDate">
                 <div class="input-group-addon">
@@ -100,9 +102,9 @@
         </div>
 
         <div class="question-wrap col-sm-12 py-3 my-2">
-          <p class="mb-0 text-dark">What is the agreed Fee per year?</p>
+          <p class="mb-0 text-dark">What is the agreed Fee per year? (In $)</p>
           <div class="info-wrap">
-            <input type="text" required class="form-control" value="" name="agreedFee">
+            <input type="text" required class="form-control" value="" name="agreedFee" placeholder="$">
           </div>
         </div>
 
